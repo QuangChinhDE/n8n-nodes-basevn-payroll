@@ -1,0 +1,45 @@
+{
+	"name": "n8n-nodes-basevn-payroll",
+	"version": "0.1.0",
+	"description": "n8n node for BaseVN Payroll API",
+	"keywords": [
+		"n8n-community-node-package",
+		"basevn",
+		"payroll"
+	],
+	"license": "MIT",
+	"homepage": "https://github.com/QuangChinhDE/n8n-nodes-basevn-payroll",
+	"author": {
+		"name": "QuangChinh",
+		"email": "quangchinh.dev@gmail.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/QuangChinhDE/n8n-nodes-basevn-payroll.git"
+	},
+	"main": "index.js",
+	"scripts": {
+		"build": "n8n-node build",
+		"lint": "n8n-node lint",
+		"release": "n8n-node release",
+		"prepublishOnly": "n8n-node prerelease"
+	},
+	"files": [
+		"dist"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"credentials": [
+			"dist/credentials/PayrollApi.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/Payroll/Payroll.node.js"
+		]
+	},
+	"devDependencies": {
+		"@n8n/node-cli": "^0.19.0",
+		"@types/node": "^22.10.5",
+		"n8n-workflow": "^1.76.0",
+		"typescript": "~5.9.2"
+	}
+}
