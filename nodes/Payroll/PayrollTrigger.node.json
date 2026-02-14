@@ -1,0 +1,3 @@
+{
+	"node": "dist/nodes/Payroll/PayrollTrigger.node.js"
+}

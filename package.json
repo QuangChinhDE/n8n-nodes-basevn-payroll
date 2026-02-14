@@ -33,7 +33,8 @@
 			"dist/credentials/PayrollApi.credentials.js"
 		],
 		"nodes": [
-			"dist/nodes/Payroll/Payroll.node.js"
+			"dist/nodes/Payroll/Payroll.node.js",
+			"dist/nodes/Payroll/PayrollTrigger.node.js"
 		]
 	},
 	"devDependencies": {
