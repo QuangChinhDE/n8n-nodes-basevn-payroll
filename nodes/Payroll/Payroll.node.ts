@@ -67,6 +67,12 @@ export class Payroll implements INodeType {
 						description: 'Retrieve payroll definitions within a cycle',
 						action: 'List payrolls',
 					},
+					{
+						name: 'Push Data',
+						value: 'pushData',
+						description: 'Push payroll data to a specific payroll',
+						action: 'Push data to payroll',
+					},
 				],
 				default: 'list',
 			},
@@ -113,6 +119,8 @@ export class Payroll implements INodeType {
 				} else if (resource === 'payroll') {
 					if (operation === 'list') {
 						responseData = await resources.payroll.list.execute.call(this, i);
+					} else if (operation === 'pushData') {
+						responseData = await resources.payroll.pushData.execute.call(this, i);
 					}
 				} else if (resource === 'record') {
 					if (operation === 'list') {
