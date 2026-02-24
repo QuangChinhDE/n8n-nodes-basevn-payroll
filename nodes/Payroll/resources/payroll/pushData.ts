@@ -5,7 +5,7 @@ import type {
 	INodeProperties,
 } from 'n8n-workflow';
 import { payrollApiRequest } from '../../shared/transport';
-import { cleanBody, processResponse } from '../../shared/utils';
+import { cleanBody } from '../../shared/utils';
 
 export const description: INodeProperties[] = [
 	{
@@ -34,7 +34,7 @@ export const description: INodeProperties[] = [
 			},
 		},
 		default: '',
-		description: 'Base64 encoded JSON array of payroll data. Example: [{"employee_id":1192,"luong_cung":10000000}]',
+		description: 'Base64 encoded JSON array of payroll data. Example: [{"employee_id":1192,"luong_cung":10000000}].',
 	},
 	{
 		displayName: 'Additional Fields',
